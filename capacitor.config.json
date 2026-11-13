@@ -1,0 +1,6 @@
+{
+  "appId": "com.nvxjournal.personal",
+  "appName": "NVX JOURNAL",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
