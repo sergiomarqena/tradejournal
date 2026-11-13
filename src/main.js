@@ -31,7 +31,7 @@ function esc(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt
 function tradeForm(t={}){let editing=!!t.id;$('#modal').innerHTML=`<div class="overlay"><form class="form"><div class="sectionhead"><h2>${editing?'Edit trade':'Add trade'}</h2><button type="button" class="dots" id="close">✕</button></div><div class="formgrid">
 <label>Market<select name="market"><option ${t.market==='Gold'?'selected':''}>Gold</option><option ${t.market==='Crypto'?'selected':''}>Crypto</option><option ${t.market==='Stocks'?'selected':''}>Stocks</option></select></label>
 <label>Asset / symbol<input name="asset" required placeholder="e.g. XAUUSD, BTCUSDT" value="${esc(t.asset||'')}"></label>
-<label>Direction<select name="side"><option ${t.side==='Short'?'selected':''}>Long</option><option ${t.side==='Short'?'selected':''}>Short</option></select></label>
+<label>Direction<select name="side"><option ${t.side==='Long'?'selected':''}>Long</option><option ${t.side==='Short'?'selected':''}>Short</option></select></label>
 <label>Status<select name="status" id="status"><option ${t.status==='Open'?'selected':''}>Open</option><option ${!t.status||t.status==='Closed'?'selected':''}>Closed</option></select></label>
 <label>Entry date & time<input name="date" type="datetime-local" required value="${t.date||dateNow()}"></label>
 <label>Exit date & time<input name="exitDate" type="datetime-local" value="${t.exitDate||''}"></label>
